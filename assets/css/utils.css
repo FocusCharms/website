@@ -1,0 +1,134 @@
+:root {
+    --color-primary: #d1a91a;
+
+    --br-default: 5px;
+    --br-high: 15px;
+}
+
+
+:root[data-theme="dark"] {
+    --color-bg: #181818;
+    --color-bg-secondary: #212121;
+    --color-bg-teritary: #313131;
+    --color-fg: #ececec;
+    --color-fg-accent: #969696;
+
+    --color-border: #383838;
+    --arrow-bg: rgba(0,0,0,0.45);
+
+}
+
+:root[data-theme="light"] {
+    --color-bg: #e7e7e7;
+    --color-bg-secondary: #dedede;
+    --color-bg-teritary: #cecece;
+    --color-fg: #131313;
+    --color-fg-accent: #696969;
+
+    --color-border: #c7c7c7;
+    --arrow-bg: rgba(255,255,255,0.6);
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after { box-sizing: inherit; }
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg);
+    min-height: 100vh;
+    color: var(--color-fg);
+    font-size: 1.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+}
+
+body, main{
+    height: 100%;
+    margin: 0;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+
+nav {
+    height: 50px;
+    width: 100% ;
+    padding: 30px 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+
+}
+
+nav ul.nav-links {
+    display: flex;
+    flex-direction: space-between;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    align-items: center;
+
+}
+
+nav ul li {
+    list-style: none;
+    transition: background-color 0.3s;
+    padding: 10px 20px;
+    border-radius: var(--br-high);
+}
+
+nav ul li a {
+    color: var(--color-fg);
+}
+
+nav ul li#active a{
+    color: var(--color-primary);
+}
+
+nav ul li:hover {
+    background-color: var(--color-bg-teritary);
+    transition: background-color 0.3s;
+}
+
+nav .profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
