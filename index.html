@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
-    
-    <link rel="stylesheet" href="/assets/css/utils.css">
-    <link rel="stylesheet" href="/assets/css/index.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Website</title>
 
-    <!-- Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
-</head>
-<body>
-    <nav>
-        <div class="name">
-            <h2>Website</h2>
-        </div>
-        <ul class="nav-links">
-            <li id="active"><a href="/"><i class="ri-home-4-line"></i> Home</a></li>
-            <li><a href="/dashboard"><i class="ri-dashboard-line"></i> Dashboard</a></li>
-            <li><a href="/settings"><i class="ri-settings-3-line"></i> Settings</a></li>
-        </ul>
+        <link rel="stylesheet" href="/assets/css/utils.css">
+        <link rel="stylesheet" href="/assets/css/index.css">
 
-        <div class="profile">
-            <img src="/assets/images/john_cena.png" alt="Profil">
-        </div>
-    </nav>
-    <section id="hero">
-        
+        <!-- Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    </head>
 
-        <div class="hero-content">
-            <h1>Willkommen auf der Website</h1>
-            <span class="subtitle">Dies ist die Startseite der Website.</span>
-        </div>
-    </section>
-    <main>
-        <section class="slidershow">
-            <div class="slides">
-                <div class="slide active" id="slide1">
-                    <img src="/assets/images/slider/slide-img1.png" alt="Slide 1" >
-                </div>
-                <div class="slide" id="slide2">
-                    <img src="/assets/images/slider/slide-img2.png" alt="Slide 2" >
-                </div>
-                <div class="slide" id="slide3" >
-                    <img src="/assets/images/slider/slide-img3.png" alt="Slide 3" >
-                </div>
-
+    <body>
+        <nav>
+            <div class="name">
+                <h2>Website</h2>
             </div>
-            <div class="controls">
-                <button class="arrow" id="prev" onclick="slider_prev()"><i class="ri-arrow-left-s-line"></i></button>
-                <button class="arrow" id="next" onclick="slider_next()"><i class="ri-arrow-right-s-line"></i></button>
+            <ul class="nav-links">
+                <li id="active"><a href="/"><i class="ri-home-4-line"></i> Home</a></li>
+                <li><a href="/dashboard"><i class="ri-dashboard-line"></i> Dashboard</a></li>
+                <li><a href="/settings"><i class="ri-settings-3-line"></i> Settings</a></li>
+            </ul>
+
+            <div class="profile">
+                <img src="/assets/images/john_cena.png" alt="Profil">
+            </div>
+        </nav>
+
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Willkommen auf der Website</h1>
+                <span class="subtitle">Dies ist die Startseite der Website.</span>
             </div>
         </section>
-    </main>
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/index.js"></script>
 
-</body>
+        <main>
+            <section class="slidershow">
+                <div class="slides">
+                    <div class="slide active" id="slide1">
+                        <img src="/assets/images/slider/slide-img1.png" alt="Slide 1" >
+                    </div>
+                    <div class="slide" id="slide2">
+                        <img src="/assets/images/slider/slide-img2.png" alt="Slide 2" >
+                    </div>
+                    <div class="slide" id="slide3" >
+                        <img src="/assets/images/slider/slide-img3.png" alt="Slide 3" >
+                    </div>
+
+                </div>
+                <div class="controls">
+                    <button class="arrow" id="prev" onclick="slider_prev()"><i class="ri-arrow-left-s-line"></i></button>
+                    <button class="arrow" id="next" onclick="slider_next()"><i class="ri-arrow-right-s-line"></i></button>
+                </div>
+            </section>
+        </main>
+
+        <script src="/assets/js/main.js"></script>
+        <script src="/assets/js/index.js"></script>
+
+    </body>
 </html>
