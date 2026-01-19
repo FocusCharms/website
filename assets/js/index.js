@@ -23,24 +23,62 @@ function loop(start) {
 };
 
 
-function mouse_event_listener(event) {
-    x = event.clientX; // X position relative to the viewport
-    y = event.clientY; // Y position relative to the viewport
-
-    if (x < 0) {
-        x = 0;
-    };
-
-    if (y < 0) {
-        y = 0;
+function clamp(number) {
+    if (number < 0) {
+        return 0;
     }
+
+    return number
+}
+
+
+function mouse_event_listener(event) {
+    x = clamp(event.clientX); // X position relative to the viewport
+    y = clamp(event.clientY); // Y position relative to the viewport
 
     console.log(x, y);
 }
 
 
+/*
+ * Structure a section on the website.
+ */
+class Section {
+    midpt;
+    sizeX;
+    sizeY;
+
+    minX;
+    maxX;
+    minY;
+    maxY;
+
+    constructor(midpt, sizeX, sizeY) {
+        this.midpt = midpt;
+        this.sizeX = sizeX;
+        this.sizeY = sizeY;
+
+        this.minX = midpt.x - (sizeX / 2)
+        this.maxX = midpt.x + (sizeX / 2)
+        this.minY = midpt.y - (sizeY / 2)
+        this.maxY = midpt.y + (sizeY / 2)
+    }
+}
+
+
 function is_on_section(section) {
-    return 1;
+    //return 1;
+
+    if (
+        x >= section.minX
+        && x <= section.maxX
+        && y >= section.minY
+        && y <= section.maxY
+    ) {
+        return 1;
+    }
+
+    return 0;
 
     // if (x >= section.minX && x <= section.maxX) {
     //     if (y >= section.minY && y <= section.maxY) {
