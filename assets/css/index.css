@@ -1,0 +1,131 @@
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+}
+section#hero {
+    height: 100vh;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    margin-top: 50px;
+    
+}
+
+section#hero .hero-content {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#hero .hero-content .subtitle{
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--color-fg-accent);
+}
+
+section.info-card {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section.info-card .title {
+    font-size: 28px;
+    font-weight: 750;
+    color: var(--color-primary);
+    font-size: 2.5rem; 
+}
+
+section.info-card .info-text {
+    font-size: 1.4rem;
+    color: var(--color-fg);
+}
+
+section.info-card .contact-link {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+    color: var(--color-fg);
+    height: fit-content;
+    width: fit-content;
+}
+
+section.info-card .contact-link:hover {
+    color: var(--color-fg-accent);
+}
+
+section.info-card .contact-link .symbol {
+    margin-right: 10px;
+    font-size: 4rem;
+    vertical-align: middle;
+    color: var(--color-secondary);
+}
+
+
+section.slidershow {
+    width: 80%;
+    max-width: 1500px;
+    min-height: 850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: var(--br-high);
+    
+}
+
+section.slidershow .slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+section.slidershow .slides .slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}   
+
+section.slidershow .slides .slide img {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+
+
+section.slidershow .controls {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+section.slidershow .controls .arrow {
+    background-color: var(--arrow-bg);
+    color: var(--color-fg);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+section.slidershow .controls .arrow:hover {
+    background-color: var(--color-bg-secondary);
+    transition: background-color 0.3s;
+}
+
