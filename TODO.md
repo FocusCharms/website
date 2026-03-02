@@ -1,3 +1,5 @@
+Should be done on 13.4.26
+
 - [ ] eng/de version
 - [ ] make linking to en/de work
 - [ ] make main be en, but maybe ask when opening?!
