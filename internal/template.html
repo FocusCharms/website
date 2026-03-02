@@ -1,1 +1,112 @@
+<!--
+cspell: words ADHS Archenhold focuscharms
+-->
 
+<!DOCTYPE html>
+    <html lang="de">
+
+        <!--Header-->
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo.png">
+
+            <!--TODO: Title per page-->
+            <title>TITLE</title>
+
+            <!--TODO: Link all files-->
+            <link rel="stylesheet" href="assets/css/utils.css">
+            <link rel="stylesheet" href="assets/css/index.css">
+
+            <!--TODO: Icons-->
+            <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        </head>
+
+        <body>
+            <!--navbar-->
+            <nav>
+                <div class="name">
+                    <h2>TITLE</h2>
+                </div>
+                <ul class="nav-links">
+                    <li id="active"><a href="index.html"><i class="ri-home-4-line"></i> Start</a></li>
+                    <li id="active"><a href="legal.html"><i class="ri-legal"></i> Impressum</a></li>
+                    <!-- TODO: about us vs.: meet the team-->
+                    <li id="active"><a href="about/team.html"><i class="ri-team"> Treffen sie das Team</i></a></li>
+                </ul>
+            </nav>
+
+            <section id="hero">
+                <div class="hero-content">
+                    <h1>HEADING</h1>
+                    <span class="subtitle">SUBTITLE</span>
+                </div>
+            </section>
+
+            <!--Main body-->
+            <main>
+                <div class="content">
+                    <section class="info-card">
+                        <span class="title">TITLE</span>
+                        <span class="info-text">
+                            <section>
+                                CONTENT
+                            </section>
+                        </span>
+                    </section>
+
+                    <!--TODO: Get pictures for Slideshow-->
+                    <section class="slidershow">
+                        <div class="slides">
+                            <!--TODO: Make slide3copy not needed-->
+                            <div class="slide" id="slide3copy" >
+                                <img src="assets/images/slider/slide-img3.png" alt="Slide 3">
+                            </div>
+                            <div class="slide active" id="slide1">
+                                <img src="assets/images/slider/slide-img1.png" alt="Slide 1">
+                            </div>
+                            <div class="slide" id="slide2">
+                                <img src="assets/images/slider/slide-img2.png" alt="Slide 2">
+                            </div>
+                            <div class="slide" id="slide3" >
+                                <img src="assets/images/slider/slide-img3.png" alt="Slide 3">
+                            </div>
+                            <div class="slide active" id="slide1copy">
+                                <img src="assets/images/slider/slide-img1.png" alt="Slide 1">
+                            </div>
+                        </div>
+
+                        <div class="controls">
+                            <button class="arrow" id="prev" onclick="slider_prev()"><i class="ri-arrow-left-s-line"></i></button>
+                            <button class="arrow" id="next" onclick="slider_next()"><i class="ri-arrow-right-s-line"></i></button>
+                        </div>
+                    </section>
+
+                    <section class="info-card">
+                        <span class="title">TITLE AFTER SLIDERS</span>
+                        <span class="info-text">
+                            TEXT AFTER SLIDERS
+                        </span>
+                    </section>
+
+                    <!--Footer-->
+                    <section class="info-card">
+                        <span class="title">Kontaktieren Sie uns</span>
+                        <a class="contact-link" target="_blank" href="https://www.instagram.com/focuscharms2/"><span id="instagram" class="symbol"><i class="ri-instagram-line"></i></span>@focuscharms2</a>
+                        <a class="contact-link" href="mailto:focuscharms9@gmail.com"><span id="mail" class="symbol"><i class="ri-mail-line"></i></span>focuscharms9@gmail.com</a>
+                    </section>
+                </div>
+            </main>
+
+            <footer>
+                <span class="row">
+                    <span><a href="https://focuscharms.github.io/website/legal.html">(c) 2026 FocusCharms Website Team. Alle Rechte vorbehalten.</a></span>
+                    <span>Diese Website wurde mit Liebe von <a href="https://github.com/NotAVlrus-exe">NotAVirus</a> und <a href="https://github.com/JoBeGaming">JoBe</a> kreiert</span>
+                </span>
+            </footer>
+
+            <script src="assets/js/main.js"></script>
+            <script src="assets/js/index.js"></script>
+
+        </body>
+</html>
