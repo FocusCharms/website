@@ -6,3 +6,4 @@
 - [ ] extend abt us -> goto aboutus.html
 - [ ] team.html
 - [ ] make building mechanism that copies header and such
+- [ ] indent vorteile
