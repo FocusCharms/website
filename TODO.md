@@ -14,3 +14,5 @@ Should be done on 13.4.26
 - [ ] Darkmode / Lightmode switch?!
 - [ ] TS
 - [ ] Make slider.ts, language.ts, mode.ts (light/dark), ...
+- [ ] Some links dont show on hover (in footer)
+- [ ] Make Website team -> link to orga (teams?!)
