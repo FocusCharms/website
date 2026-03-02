@@ -1,8 +1,8 @@
-- [] eng/de version
-- [] eng/de selection js
-- [] pictures
-- [] bg
-- [] icons
-- [] extend abt us -> goto aboutus.html
-- [] team.html
-- [] make building mechanism that copies header and such
+- [ ] eng/de version
+- [ ] eng/de selection js
+- [ ] pictures
+- [ ] bg
+- [ ] icons
+- [ ] extend abt us -> goto aboutus.html
+- [ ] team.html
+- [ ] make building mechanism that copies header and such
