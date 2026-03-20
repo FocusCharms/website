@@ -82,7 +82,7 @@ cspell: words ADHS Archenhold focuscharms
                                 </p>
 
                                 <p>
-                                Die Wirkung von Fidget-Objekten wird in der Forschung unterschiedlich bewertet. Einige Studien zeigen, dass leichte, repetitive Bewegungen die Konzentration und Selbstregulation bei bestimmten Personen unterstützen können, während andere Studien auf mögliche Ablenkungseffekte hinweisen. Deshalb verstehen wir Focus Charms nicht als medizinisches Produkt, sondern als optionales Hilfsmittel, das individuell ausprobiert werden kann.
+                                Die Wirkung von Fidget-Objekten wird in der Forschung unterschiedlich bewertet. Einige Studien zeigen, dass leichte, repetitive Bewegungen die Konzentration und Selbstregulation bei bestimmten Personen unterstützen können, während andere Studien auf mögliche Ablenkungseffekte hinweisen. Deshalb verstehen wir Focus Charms nicht als medizinisches Produkt, sondern als optionales Hilfsmittel, das individuell ausprobiert werden sollte. Gerne können sie sich bei Fragen an uns wenden.
                                 Sollte der FocusCharm für sie nicht funktionieren, freuen wir uns sehr über jegliches <a href="">Feedback</a>.
                                 </p>
                             </section>
@@ -119,11 +119,11 @@ cspell: words ADHS Archenhold focuscharms
                     <section class="info-card">
                         <span class="title">Vorteile vom FocusCharm</span>
                         <span class="info-text">
-                            <li>Fördern subtile, kontrollierte Bewegung (ohne große Ablenkung).</li>
-                            <li>Schönes Design - als Schlüsselanhänger oder Glücksbringer tragbar.</li>
-                            <li>Handlich & leise - für Schule, Büro oder Zuhause.</li>
-                            <li>Umweltfreundliche Materialien (falls zutreffend: hier eure Materialien einsetzen).</li>
-                            <li>Geeignet für Menschen, die von taktilen Hilfen profitieren - keine medizinische Behandlung, sondern ein unterstützendes Hilfsmittel.</li>
+                            <li>Fördern subtile, kontrollierte Bewegung (ohne große Ablenkung)</li>
+                            <li>Schönes Design - als Schlüsselanhänger oder Glücksbringer tragbar</li>
+                            <li>Handlich & leise - für Schule, Büro oder Zuhause</li>
+                            <li>Umweltfreundliche Materialien</li>
+                            <li>Geeignet für Menschen, die von taktilen Hilfen profitieren - keine medizinische Behandlung, sondern ein unterstützendes Hilfsmittel</li>
                         </span>
                     </section>
 
@@ -135,39 +135,39 @@ cspell: words ADHS Archenhold focuscharms
                     </section>
                 </div>
                 <script>
-                    const toggle = document.getElementById("themeToggle")
+                    const toggle = document.getElementById("themeToggle");
 
                     function setTheme(theme) {
-                        document.documentElement.setAttribute("data-theme", theme)
-                        localStorage.setItem("theme", theme)
-                    }
+                        document.documentElement.setAttribute("data-theme", theme);
+                        localStorage.setItem("theme", theme);
+                    };
 
                     function initTheme() {
-                        const saved = localStorage.getItem("theme")
+                        const saved = localStorage.getItem("theme");
 
                         if (saved) {
-                            setTheme(saved)
-                            toggle.checked = saved === "dark"
-                            return
-                        }
+                            setTheme(saved);
+                            toggle.checked = saved === "dark";
+                            return;
+                        };
 
-                        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+                        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
                         if (prefersDark) {
-                            setTheme("dark")
-                            toggle.checked = true
-                        }
-                    }
+                            setTheme("dark");
+                            toggle.checked = true;
+                        };
+                    };
 
                     toggle.addEventListener("change", () => {
                         if (toggle.checked) {
-                            setTheme("dark")
+                            setTheme("dark");
                         } else {
-                            setTheme("light")
+                            setTheme("light");
                         }
                     })
 
-                    initTheme()
+                    initTheme();
                 </script>
             </main>
 
@@ -183,5 +183,3 @@ cspell: words ADHS Archenhold focuscharms
 
         </body>
 </html>
-
-
