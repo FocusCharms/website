@@ -75,6 +75,10 @@ h1 {
     font-size: 5rem;
 }
 
+h1#special {
+    font-size: 5rem;
+    color: inherit;
+}
 
 nav {
     height: 50px;
