@@ -16,4 +16,5 @@ Should be done on 13.4.26
 - [ ] Make slider.js, language.js, mode.js (light/dark), ...
 - [ ] Some links dont show on hover (in footer)?! <- Browser problem maybe, also who the fuck cares (issue tho lol)
 - [ ] Make Website team -> link to orga (teams?!)
+- [ ] HOSTING
 <!--- [ ] mobile version is shit-->
