@@ -11,7 +11,6 @@ Should be done on 13.4.26
 - [ ] extend abt us -> goto aboutus.html
 - [ ] team.html
 - [ ] make building mechanism that copies header and such
-- [ ] indent vorteile
 - [ ] Darkmode / Lightmode switch be everywhere
 - [ ] Design good dm/lm switch
 - [ ] Make slider.js, language.js, mode.js (light/dark), ...
