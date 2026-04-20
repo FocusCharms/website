@@ -1,4 +1,4 @@
-// TODO: Make this work for all subs, and add a language changer
+// TODO: Make this work for all subs (pages), and add a language changer
 
 function setSelfToLanguage(lang) {
   if (!location.pathname.startswith(`/${lang}`)) {
