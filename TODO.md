@@ -1,5 +1,6 @@
 Should be done on 13.4.26
 
+- [ ] Parse params being either `mode=[dark|light]` and `lang=[en|de]`. Default is `mode=dark&lang=de`
 - [ ] Template building system (py)
 - [ ] UPDATE SUBS WITH "TEMPLATE"
 - [ ] SEO (?!?!) -> BING IS FUCKING 1st
