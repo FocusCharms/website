@@ -7,7 +7,7 @@ Should be done on 13.4.26
 - [ ] make linking to en/de work
 - [ ] make main be en, but maybe ask when opening?!
 - [ ] eng/de selection js
-- [ ] pictures
+- [x] pictures
 - [x] bg
 - [x] icons
 - [ ] make icon round
