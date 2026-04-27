@@ -27,6 +27,15 @@ section#hero .hero-content .subtitle{
     color: var(--color-fg-accent);
 }
 
+/*
+ * This I hope works
+ */
+section#hero .hero-content .subtitle-keep{
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--keep-color-fg-accent);
+}
+
 section.info-card {
     width: 80%;
     display: flex;
