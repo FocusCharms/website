@@ -1,4 +1,5 @@
 Should be done on 13.4.26
+
 - [ ] SEO (?!?!) -> BING IS FUCKING 1st
 - [ ] 2:0 (with timeout!!), 3: flat, 5? in https://alvarotrigo.com/blog/toggle-switch-css/
 - [ ] eng/de version
@@ -6,8 +7,10 @@ Should be done on 13.4.26
 - [ ] make main be en, but maybe ask when opening?!
 - [ ] eng/de selection js
 - [ ] pictures
-- [ ] bg
-- [ ] icons
+- [x] bg
+- [x] icons
+- [ ] make icon round
+- [ ] make icon everywhere
 - [ ] extend abt us -> goto aboutus.html
 - [ ] team.html
 - [ ] make building mechanism that copies header and such
