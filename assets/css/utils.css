@@ -18,7 +18,7 @@
     --color-bg-secondary: #212121;
     --color-bg-teritary: #313131;
     --color-fg: #ececec;
-    --color-fg-accent: #a5a5a5;
+    --color-fg-accent: #969696;
 
     --color-border: #383838;
     --arrow-bg: rgba(0,0,0,0.45);
@@ -80,7 +80,13 @@ h1 {
 
 h1#special {
     font-size: 5rem;
-    color: #ececec;
+    color: var(--keep-color-fg);
+}
+
+/*idfk to be honest, i *might* have worked on this tday but aaah nO*/
+h1#special_sub {
+    font-size: 5rem;
+    color: var(--keep-color-fg-accent);
 }
 
 
