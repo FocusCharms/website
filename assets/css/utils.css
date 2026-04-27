@@ -5,9 +5,11 @@
     --color-secondary: #4a90e2;
     --color-secondary-accent: #3a6fb8;
 
-    --br-default: 5px;
-    --br-high: 15px;
+    --keep-color-fg: #ececec;
+    --keep-color-fg-accent: #a5a5a5;
     
+    --br-default: 5px;
+    --br-high: 15px;    
 }
 
 
@@ -20,7 +22,6 @@
 
     --color-border: #383838;
     --arrow-bg: rgba(0,0,0,0.45);
-
 }
 
 :root[data-theme="light"] {
@@ -76,10 +77,12 @@ h1 {
     font-size: 5rem;
 }
 
+
 h1#special {
     font-size: 5rem;
     color: #ececec;
 }
+
 
 nav {
     height: 50px;
@@ -91,8 +94,8 @@ nav {
     justify-content: space-between;
     position: fixed;
     z-index: 1;
-
 }
+
 
 nav ul.nav-links {
     display: flex;
@@ -101,13 +104,13 @@ nav ul.nav-links {
     margin: 0;
     gap: 20px;
     align-items: center;
-
 }
+
 
 nav ul li {
     list-style: none;
-
 }
+
 
 nav ul li a {
     color: var(--color-fg);
@@ -116,21 +119,24 @@ nav ul li a {
     border-radius: var(--br-high);
 }
 
+
 nav ul li#active a{
     color: var(--color-primary);
 }
+
 
 nav ul li a:hover {
     background-color: var(--color-bg-teritary);
     transition: background-color 0.3s;
 }
 
+
 nav .profile img {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-
 }
+
 
 main {
     display: flex;
@@ -139,6 +145,7 @@ main {
     align-items: center;
     margin-top: 60px;
 }
+
 
 .row {
     display: flex;
@@ -149,11 +156,12 @@ main {
     flex-direction: column;
 }
 
+
 footer {
     margin-top: 50px;
 }
 
+
 footer .row {
     justify-content: space-between;
-
 }
