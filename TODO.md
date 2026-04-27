@@ -4,7 +4,7 @@ Should be done on 13.4.26
 - [ ] Template building system (py)
 - [ ] UPDATE SUBS WITH "TEMPLATE"
 - [ ] SEO (?!?!) -> BING IS FUCKING 1st
-- [ ] 2:0 (with timeout!!), 3: flat, 5? in https://alvarotrigo.com/blog/toggle-switch-css/
+- [ ] 2 (with timeout maybe?) in https://alvarotrigo.com/blog/toggle-switch-css/
 - [ ] eng/de version
 - [ ] make linking to en/de work
 - [ ] make main be en, but maybe ask when opening?!
