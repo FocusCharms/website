@@ -46,11 +46,11 @@ label {
     cursor: pointer;
     padding: 30px 20px; /* This better work, else im sad */
     text-indent: -9999px;
-    width: 100px;
-    height: 50px;
+    width: 75px;
+    height: 37px; /*37,5 here...*/
     background: var(--color-bg-secondary);
     display: block;
-    border-radius: 50px;
+    border-radius: 73px; /*37,5*/
     position: relative;
 }
 
@@ -59,12 +59,12 @@ label:after {
     content: "";
     position: absolute;
     /*Halved all the pixel stuff here, but 5/2 is 2.5, we use 2 here cuz why not idk*/  
-    top: 2px;
-    left: 2px;
-    width: 45px;
-    height: 45px;
+    top: 2px; /*1,5 here*/
+    left: 2px; /*1,5 here*/
+    width: 34px; /*33,75*/
+    height: 34px; /*33,75*/
     background: var(--color-bg);
-    border-radius: 90px;
+    border-radius: 67px; /*YASSEIN (67,5)*/
     transition: 0.5s;
 }
 
@@ -75,7 +75,7 @@ input:checked + label {
 
 
 input:checked + label:after {
-    left: calc(100% - 2px); /*5/2 is 2 here too, idk*/
+    left: calc(100% - 2px); /*5/2 is 2 here too, idk, thne we got 2*3/4, still 2 aprox*/
     transform: translateX(-100%);
 }
 
