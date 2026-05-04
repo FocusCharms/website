@@ -44,6 +44,7 @@ input[type=checkbox] {
 
 label {
     cursor: pointer;
+    padding: 30px 20px; /* This better work, else im sad */
     text-indent: -9999px;
     width: 100px;
     height: 50px;
