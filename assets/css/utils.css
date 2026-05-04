@@ -1,87 +1,72 @@
-:root {
-    --color-primary: #d1a91a;
-    --color-primary-accent: #b48817;
-
-    --color-secondary: #4a90e2;
-    --color-secondary-accent: #3a6fb8;
-
-    --keep-color-fg: #ececec;
-    --keep-color-fg-accent: #a5a5a5;
-    
-    --br-default: 5px;
-    --br-high: 15px;    
-}
-
-
-:root[data-theme="dark"] {
-    --color-bg: #181818;
-    --color-bg-secondary: #212121;
-    --color-bg-teritary: #313131;
-    --color-fg: #ececec;
-    --color-fg-accent: #969696;
-
-    --color-border: #383838;
-    --arrow-bg: rgba(0,0,0,0.45);
-}
-
-:root[data-theme="light"] {
-    --color-bg: #e7e7e7;
-    --color-bg-secondary: #dedede;
-    --color-bg-teritary: #cecece;
-    --color-fg: #131313;
-    --color-fg-accent: #696969;
-
-    --color-border: #c7c7c7;
-    --arrow-bg: rgba(255,255,255,0.6);
-}
-
-
+/* Hide checkbox cleanly */
 input[type=checkbox] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
+  position: absolute;
+  opacity: 0;
 }
 
+/* Track */
 label {
-    cursor: pointer;
-    padding: 30px 20px; /* This better work, else im sad */
-    text-indent: -9999px;
-    width: 75px;
-    height: 37px; /*37,5 here...*/
-    background: var(--color-bg-secondary);
-    display: block;
-    border-radius: 73px; /*37,5*/
-    position: relative;
+  cursor: pointer;
+  width: 60px;
+  height: 32px;
+  background: var(--color-bg-teritary);
+  border-radius: 999px;
+  position: relative;
+  display: inline-block;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: inset 0 0 0 1px var(--color-border);
 }
 
-
-label:after {
-    content: "";
-    position: absolute;
-    /*Halved all the pixel stuff here, but 5/2 is 2.5, we use 2 here cuz why not idk*/  
-    top: 2px; /*1,5 here*/
-    left: 2px; /*1,5 here*/
-    width: 34px; /*33,75*/
-    height: 34px; /*33,75*/
-    background: var(--color-bg);
-    border-radius: 67px; /*YASSEIN (67,5)*/
-    transition: 0.5s;
+/* Thumb */
+label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(
+    145deg,
+    var(--color-bg),
+    var(--color-bg-secondary)
+  );
+  box-shadow: 
+    0 2px 6px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  transition: transform 0.25s cubic-bezier(.4,0,.2,1),
+              background 0.25s ease;
 }
 
-
+/* Checked state (track) */
 input:checked + label {
-    background: var(--color-fg);
+  background: var(--color-primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 40%, transparent);
 }
 
-
-input:checked + label:after {
-    left: calc(100% - 2px); /*5/2 is 2 here too, idk, thne we got 2*3/4, still 2 aprox*/
-    transform: translateX(-100%);
+/* Checked state (thumb) */
+input:checked + label::after {
+  transform: translateX(28px);
+  background: linear-gradient(
+    145deg,
+    var(--color-primary),
+    var(--color-primary-accent)
+  );
 }
 
+/* Active press effect */
+label:active::after {
+  transform: scale(0.92) translateX(0);
+}
 
-label:active:after {
-    width: 65px;
+input:checked + label:active::after {
+  transform: scale(0.92) translateX(28px);
+}
+
+/* Optional focus accessibility */
+input:focus-visible + label {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 3px;
 }
 
 
