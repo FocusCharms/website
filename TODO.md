@@ -13,7 +13,7 @@ Should be done on 13.4.26
 - [x] bg
 - [x] icons
 - [x] make icon round
-- [ ] make icon everywhere
+- [ ] make icon everywhere (!!)
 - [ ] extend abt us -> goto aboutus.html
 - [ ] team.html
 - [ ] make building mechanism that copies header and such
