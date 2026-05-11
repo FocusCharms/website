@@ -1,0 +1,9 @@
+{
+  "name": "focuscharms-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site build system for FocusCharms.",
+  "scripts": {
+    "build": "node build.js"
+  }
+}

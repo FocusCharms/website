@@ -1,8 +1,0 @@
-dm/lm not working
-heading
-picture (bg) + aignment
-texts are long as fuck
-spacing between slider stuff
-footer looks shit too
-impressum is wired
-aligment of website general, can scroll to right
