@@ -136,34 +136,61 @@ TODO: Can we use some &mode=dark for having mode transfer (also ofcourse have dm
                     </section>
                 </div>
                 <script>
+                    const themeToggle = document.getElementById('theme-switch');
+                    const switchLabelText = document.querySelector('.label-switch');
+                    //const navLinks = document.querySelectorAll('nav .nav-links a');
+                    
+                    const langDark = "Dunkel";
+                    const langBright = "Hell";
+                    
+                    function setTheme(theme) {
+                        document.documentElement.setAttribute('data-theme', theme);
+                        localStorage.setItem('theme', theme);
+                    
+                        if (themeToggle) {
+                            themeToggle.checked = theme === 'dark';
+                            themeToggle.setAttribute('aria-checked', theme === 'dark');
+                        }
+                    
+                        if (switchLabelText) {
+                            switchLabelText.textContent = theme === 'dark' ? langDark : langBright;
+                        }
+                    }
+                    
+                    function initTheme() {
+                        const savedTheme = localStorage.getItem('theme');
+                        const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
+                        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+                        setTheme(theme);
+                    }
                     // TODO: SEE OTHER BRANCH
                     //       E:G.:
                     //            LABEL
                     //            WORK EVERYWHERE
                     //            ACTUALLY WORK AT ALL
-                    const toggle = document.getElementById("switch");
+                    // const toggle = document.getElementById("switch");
 
-                    function setTheme(theme) {
-                        document.documentElement.setAttribute("data-theme", theme);
-                        localStorage.setItem("theme", theme);
-                    };
+                    // function setTheme(theme) {
+                    //     document.documentElement.setAttribute("data-theme", theme);
+                    //     localStorage.setItem("theme", theme);
+                    // };
 
-                    function initTheme() {
-                        const saved = localStorage.getItem("theme");
+                    // function initTheme() {
+                    //     const saved = localStorage.getItem("theme");
 
-                        if (saved) {
-                            setTheme(saved);
-                            toggle.checked = saved === "dark";
-                            return;
-                        };
+                    //     if (saved) {
+                    //         setTheme(saved);
+                    //         toggle.checked = saved === "dark";
+                    //         return;
+                    //     };
 
-                        const prefersDark = true; //window.matchMedia("(prefers-color-scheme: dark)").matches;
+                    //     const prefersDark = true; //window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-                        if (prefersDark) {
-                            setTheme("dark");
-                            toggle.checked = true;
-                        };
-                    };
+                    //     if (prefersDark) {
+                    //         setTheme("dark");
+                    //         toggle.checked = true;
+                    //     };
+                    // };
 
                     toggle.addEventListener("change", () => {
                         if (toggle.checked) {
@@ -173,7 +200,14 @@ TODO: Can we use some &mode=dark for having mode transfer (also ofcourse have dm
                         }
                     })
 
-                    initTheme();
+                    document.addEventListener('DOMContentLoaded', () => {
+                        initTheme();
+                        if (themeToggle) {
+                            themeToggle.addEventListener('change', () => {
+                                setTheme(themeToggle.checked ? 'dark' : 'light');
+                            });
+                        }
+                    });
                 </script>
             </main>
 
