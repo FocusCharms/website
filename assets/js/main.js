@@ -2,6 +2,9 @@ const themeToggle = document.getElementById('theme-switch');
 const switchLabelText = document.querySelector('.switch-label-text');
 const navLinks = document.querySelectorAll('nav .nav-links a');
 
+const langDark = "Dunkel";
+const langBright = "Hell";
+
 function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
@@ -12,7 +15,7 @@ function setTheme(theme) {
     }
 
     if (switchLabelText) {
-        switchLabelText.textContent = theme === 'dark' ? 'Dunkel' : 'Hell';
+        switchLabelText.textContent = theme === 'dark' ? langDark : langBright;
     }
 }
 
@@ -103,4 +106,3 @@ document.addEventListener('DOMContentLoaded', () => {
     markActiveLink();
     initSlider();
 });
-
