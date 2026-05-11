@@ -27,6 +27,7 @@ function initTheme() {
 }
 
 function markActiveLink() {
+    // btw this might make it only work on index.html, i guess so at least
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
     navLinks.forEach(link => {
