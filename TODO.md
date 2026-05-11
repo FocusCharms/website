@@ -23,3 +23,5 @@ Should be done on 13.4.26
 - [ ] Make Website team -> link to orga (teams?!)
 - [ ] HOSTING
 <!--- [ ] mobile version is shit-->
+
+- [ ] See https://www.github.com/<user>/<repo>/actions/workflows/<workflow>.yml/badge.svg and /actions/workflows in general.
