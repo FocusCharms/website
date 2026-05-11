@@ -1,211 +1,251 @@
-/* Container positioning (controls placement on page) */
-.slider-container {
-  display: flex;
-  justify-content: flex-start; /* left align */
-  margin-top: 40px; /* push it lower */
+:root {
+  --color-bg: #f8f7f2;
+  --color-bg-secondary: #ffffff;
+  --color-bg-teritary: rgba(15, 23, 42, 0.06);
+  --color-fg: #111827;
+  --color-fg-secondary: #475569;
+  --color-fg-accent: #5b21b6;
+  --color-primary: #6c5ce7;
+  --color-secondary: #f6a800;
+  --color-border: rgba(15, 23, 42, 0.08);
+  --arrow-bg: rgba(255, 255, 255, 0.92);
+  --br-high: 24px;
 }
 
-
-/* Hide checkbox */
-input[type=checkbox] {
-  position: absolute;
-  opacity: 0;
+:root[data-theme='dark'] {
+  --color-bg: #0f172a;
+  --color-bg-secondary: #121b2f;
+  --color-bg-teritary: rgba(255, 255, 255, 0.08);
+  --color-fg: #e2e8f0;
+  --color-fg-secondary: #94a3b8;
+  --color-fg-accent: #a5b4fc;
+  --color-primary: #818cf8;
+  --color-secondary: #facc15;
+  --color-border: rgba(226, 232, 240, 0.12);
+  --arrow-bg: rgba(15, 23, 42, 0.92);
 }
-
-
-/* Track */
-label {
-  cursor: pointer;
-  width: 64px;
-  height: 34px;
-  background: var(--color-bg-teritary);
-  border-radius: 999px;
-  position: relative;
-  display: inline-block;
-  box-shadow: inset 0 0 0 1px var(--color-border);
-  transition: background 0.25s ease;
-}
-
-
-/* Thumb (the black moving part) */
-label::after {
-  content: "";
-  position: absolute;
-
-  /* Centering */
-  top: 2px;
-  left: 2px;
-
-  /* Bigger thumb */
-  width: 30px;
-  height: 30px;
-
-  border-radius: 50%;
-  background: #111; /* your black */
-
-  transition: transform 0.25s cubic-bezier(.4,0,.2,1);
-}
-
-
-/* Checked state */
-input:checked + label {
-  background: var(--color-primary);
-}
-
-
-/* Move thumb exactly across */
-input:checked + label::after {
-  transform: translateX(30px);
-}
-
-/* Active press effect */
-label:active::after {
-  transform: scale(0.92) translateX(0);
-}
-
-input:checked + label:active::after {
-  transform: scale(0.92) translateX(28px);
-}
-
-/* Optional focus accessibility */
-input:focus-visible + label {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 3px;
-}
-
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
-    box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  box-sizing: border-box;
+  background: var(--color-bg);
+  color: var(--color-fg);
 }
 
 *, *::before, *::after {
-    box-sizing: inherit;
-}
-
-html,
-body {
-    display: flex;
-    flex-direction: column;
-    background: var(--color-bg);
-    min-height: 100vh;
-    color: var(--color-fg);
-    font-size: 1rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: inherit;
 }
 
 body {
-    background-color: var(--color-bg);
-    color: var(--color-fg);
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-fg);
 }
 
-body, main{
-    height: 100%;
-    margin: 0;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-
-
-/*a {
-    text-decoration: none;
-}*/
-
-h1 {
-    font-size: 5rem;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-
-h1#special {
-    font-size: 5rem;
-    color: var(--keep-color-fg);
+a:hover,
+ a:focus-visible {
+  text-decoration: underline;
 }
 
-/*idfk to be honest, i *might* have worked on this tday but aaah nO*/
-h1#special_sub {
-    font-size: 5rem;
-    color: var(--keep-color-fg-accent);
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
-
 
 nav {
-    height: 50px;
-    width: 100% ;
-    padding: 30px 20px;
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 24px;
+  backdrop-filter: blur(20px);
+  background: rgba(248, 247, 242, 0.88);
+  border-bottom: 1px solid var(--color-bg-teritary);
 }
 
-
-nav ul.nav-links {
-    display: flex;
-    flex-direction: space-between;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-    align-items: center;
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
-
-nav ul li {
-    list-style: none;
+.name h2 {
+  font-size: 1.15rem;
+  letter-spacing: -0.03em;
+  margin: 0;
 }
 
-
-nav ul li a {
-    color: var(--color-fg);
-    padding: 10px 20px;
-    transition: background-color 0.3s;
-    border-radius: var(--br-high);
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-
-nav ul li#active a{
-    color: var(--color-primary);
+.nav-links a {
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: var(--color-fg-secondary);
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
-
-nav ul li a:hover {
-    background-color: var(--color-bg-teritary);
-    transition: background-color 0.3s;
+.nav-links a.active,
+.nav-links a:hover {
+  background: var(--color-bg-teritary);
+  color: var(--color-primary);
 }
 
-
-nav .profile img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-fg-secondary);
+  white-space: nowrap;
 }
 
+.switch-label-text {
+  font-size: 0.95rem;
+}
+
+.switch-control {
+  position: relative;
+  width: 52px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--color-bg-teritary);
+  border: 1px solid var(--color-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.switch-control::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s cubic-bezier(.4, 0, .2, 1);
+}
+
+input[type='checkbox'] {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+input[type='checkbox']:checked + .switch-control::after {
+  transform: translateX(22px);
+}
+
+input[type='checkbox']:focus-visible + .switch-control {
+  outline: 2px solid rgba(99, 102, 241, 0.35);
+  outline-offset: 3px;
+}
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 86px;
 }
-
 
 .row {
-    display: flex;
-    flex-direction: row;
-}
-.column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
+.footer-row {
+  justify-content: space-between;
+}
 
 footer {
-    margin-top: 50px;
+  padding: 24px 20px 40px;
 }
-
 
 footer .row {
-    justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: var(--color-fg-secondary);
 }
+
+@media (max-width: 860px) {
+  nav {
+    padding: 16px 18px;
+  }
+
+  .nav-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .nav-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .name h2 {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  footer {
+    padding: 18px 16px 32px;
+  }
+
+  footer .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

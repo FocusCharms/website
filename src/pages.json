@@ -1,0 +1,26 @@
+[
+    {
+        "output": "index.html",
+        "title": "FocusCharms Homepage",
+        "navTitle": "FocusCharms",
+        "heroTitle": "Willkommen bei FocusCharms",
+        "heroSubtitle": "Schülerfirma seit 2025.",
+        "contentPath": "src/content/index.html"
+    },
+    {
+        "output": "content/legal.html",
+        "title": "Impressum | FocusCharms",
+        "navTitle": "Impressum",
+        "heroTitle": "Impressum",
+        "heroSubtitle": "Alle rechtlichen Hinweise auf einen Blick.",
+        "contentPath": "src/content/legal.html"
+    },
+    {
+        "output": "content/about/team.html",
+        "title": "Unser Team | FocusCharms",
+        "navTitle": "Unser Team",
+        "heroTitle": "Unser Team",
+        "heroSubtitle": "Lerne die Köpfe hinter FocusCharms kennen.",
+        "contentPath": "src/content/about-team.html"
+    }
+]

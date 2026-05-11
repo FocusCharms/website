@@ -1,11 +1,11 @@
 Should be done on 13.4.26
 
 - [ ] Parse params being either `mode=[dark|light]` and `lang=[en|de]`. Default is `mode=dark&lang=de`
-- [ ] Template building system (something already done)
+- [ ] Template building system (py)
 - [ ] UPDATE SUBS WITH "TEMPLATE"
 - [ ] SEO (?!?!) -> BING IS FUCKING 1st
 - [x] 2 (with timeout maybe?) in https://alvarotrigo.com/blog/toggle-switch-css/
-- [ ] eng/de version nah
+- [ ] eng/de version
 - [ ] make linking to en/de work
 - [ ] make main be en, but maybe ask when opening?!
 - [ ] eng/de selection js
@@ -22,6 +22,4 @@ Should be done on 13.4.26
 - [ ] Make slider.js, language.js, mode.js (light/dark), ...
 - [ ] Make Website team -> link to orga (teams?!)
 - [ ] HOSTING
-- [ ] mobile version is shit
-
-- [ ] See https://www.github.com/<user>/<repo>/actions/workflows/<workflow>.yml/badge.svg and /actions/workflows in general.
+<!--- [ ] mobile version is shit-->
