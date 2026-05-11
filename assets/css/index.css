@@ -37,6 +37,7 @@ section#hero .hero-content .subtitle {
 section#hero .hero-content .subtitle-keep {
     padding: 20px;
     border-radius: 10px;
+    font-size: 1.4rem;
     color: #ffffff /*var(--keep-color-fg-accent);*/
 }
 
