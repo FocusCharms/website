@@ -38,7 +38,7 @@ section#hero .hero-content .subtitle-keep {
     padding: 20px;
     border-radius: 10px;
     font-size: 1.4rem;
-    color: #ffffff /*var(--keep-color-fg-accent);*/
+    color: #111 /*var(--keep-color-fg-accent);*/
 }
 
 section.info-card {
