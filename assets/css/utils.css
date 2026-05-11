@@ -47,6 +47,40 @@ label::after {
 }
 
 
+/* Track */
+label-switch {
+  cursor: pointer;
+  width: 64px;
+  height: 34px;
+  background: var(--color-bg-teritary);
+  border-radius: 999px;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 0 0 0 1px var(--color-border);
+  transition: background 0.25s ease;
+}
+
+
+/* Thumb (the black moving part) */
+label-switch::after {
+  content: "";
+  position: absolute;
+
+  /* Centering */
+  top: 2px;
+  left: 2px;
+
+  /* Bigger thumb */
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  background: #111; /* your black */
+
+  transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+}
+
+
 /* Checked state */
 input:checked + label {
   background: var(--color-primary);
