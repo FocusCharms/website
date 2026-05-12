@@ -151,7 +151,7 @@ h1 {
 
 
 h1#special {
-    font-size: 5rem;
+    font-size:  clamp(1.5rem, 5vw, 4rem); /*5rem;*/
     color: var(--keep-color-fg);
 }
 
