@@ -10,19 +10,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
 </head>
 <body data-page="index.html">
-    <nav>
+    <nav aria-expanded="false">
         <div class="nav-left">
             <div class="name">
                 <h2>FocusCharms</h2>
             </div>
-            <div class="theme-switcher">
-                <span class="switch-label-text">Dark</span>
-                <input type="checkbox" id="theme-switch" />
-                <label for="theme-switch" class="switch-control"></label>
+            <div class="nav-actions">
+                <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Menü öffnen">
+                    <i class="ri-menu-line"></i>
+                </button>
+                <div class="theme-switcher">
+                    <span class="switch-label-text">Dark</span>
+                    <input type="checkbox" id="theme-switch" />
+                    <label for="theme-switch" class="switch-control"></label>
+                </div>
             </div>
         </div>
 
-        <ul class="nav-links">
+        <ul id="primary-navigation" class="nav-links">
             <li><a href="index.html"><i class="ri-home-4-line"></i> Start</a></li>
             <li><a href="content/legal.html"><i class="ri-legal"></i> Impressum</a></li>
             <li><a href="content/about/team.html"><i class="ri-team"></i> Unser Team</a></li>

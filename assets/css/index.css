@@ -13,6 +13,100 @@ section#hero {
   display: grid;
   place-items: center;
   text-align: center;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: min(100%, calc(100% - 32px));
+    gap: 40px;
+  }
+
+  .hero-content {
+    padding: 64px 18px 48px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.4rem, 7vw, 3.6rem);
+    line-height: 1.05;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    padding: 14px 20px;
+    max-width: 100%;
+  }
+
+  .info-card {
+    padding: 24px;
+  }
+
+  .info-card .info-text {
+    font-size: clamp(0.98rem, 1.6vw, 1.1rem);
+  }
+
+  .info-card .contact-link {
+    width: 100%;
+  }
+
+  .slidershow {
+    aspect-ratio: 4 / 3;
+    min-height: auto;
+  }
+
+  .controls {
+    padding: 0 12px;
+  }
+
+  .arrow {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    gap: 28px;
+  }
+
+  .hero-content {
+    padding: 52px 16px 42px;
+  }
+
+  .info-card {
+    padding: 20px;
+  }
+
+  .info-card .title {
+    font-size: 1.6rem;
+  }
+
+  .info-card .info-text {
+    font-size: 1rem;
+  }
+
+  .info-card .contact-link {
+    gap: 10px;
+    font-size: 0.98rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .info-card .symbol {
+    width: 38px;
+    height: 38px;
+  }
+
+  .slidershow {
+    aspect-ratio: 16 / 10;
+  }
+
+  .arrow {
+    width: 38px;
+    height: 38px;
+  }
+}
+  text-align: center;
   background-image: linear-gradient(180deg, rgba(15, 23, 42, 0.18), rgba(15, 23, 42, 0.12)), url('assets/images/bg.jpeg');
   background-size: cover;
   background-position: center;
